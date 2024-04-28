@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAKTUS</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <!-- start page -->
+        <div class="mentors__hero">
+            <div class="row">
+                <header>
+                    <div class="header__logo">
+                        <a href="{% url 'index' %}">
+                            <img src="{% static 'images/kaktus_logo.png' %}" alt="aaa">
+                        </a>
+                    </div>
+                    <nav class="header__nav">
+                        <ul>
+                           <li><a href="{% url 'index' %}">Bosh sahifa</a></li>
+                            <li><a href="{% url 'project' %}" >Amaliy ishlar</a></li>
+                            <li><a href="{% url 'mentor' %}" >Mentorlar</a></li>
+                            <li><a href="{% url 'article' %}" >Maqolalar</a></li>
+                            <li><a href="{% url 'course' %}">Kurslar</a></li>
+                            <li><a href="{% url 'event' %}">Tadbirlar</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+        </div>
+        <!-- end page -->
+        <!-- start mentors -->
+        <div class="mentor_page">
+            <div class="row">
+                <div class="page__header">
+                    <div class="page__title">
+                        <span>Konsultatsiya</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="content">
+                    <div class="content__header">
+                        <div class="content__header-author">
+                            <div class="author-logo">
+                                <img src="{% static 'images/savol-logo.png' %}" alt="">
+                            </div>
+                            <div class="author-info">
+                                <h3>Savol beruvchi</h3>
+                                <!-- <i class="fa-solid fa-briefcase"></i> <span>Sim-sim.uz, RTM, Ra1sBuva</span> -->
+                            </div>
+                        </div>
+                        <div class="content__header-side">
+                            <span>Sana: 28.04.2024</span>
+                        </div>
+                    </div>
+                    <div class="content__body">
+                        <div class="content__body-hero">
+                            <p>
+                               Murojaat: The cron expression 'O 3 **** schedules the job to run every second of the 3rd minute of every hour, which does not align with the intention to run it daily. Consider using '0 0 3 ** * to schedule the job to run daily at 3 AM.
+                            </p>
+                        </div>
+                        <div class="content__body-text">
+                            <img src="{% static 'images/savol.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="content__header">
+                        <div class="content__header-author">
+                            <div class="author-logo">
+                                <img src="{% static 'images/mentor-logo.png' %}" alt="">
+                            </div>
+                            <div class="author-info">
+                                <h3>Asrorov Sanjar</h3>
+                                <i class="fa-solid fa-briefcase"></i> <span>Mentor, Sim-sim.uz, RTM, Ra1sBuva</span>
+                            </div>
+                        </div>
+                        <div class="content__header-side">
+                            <span>Sana: 28.04.2024</span>
+                        </div>
+                    </div>
+                    <div class="content__body">
+                        <div class="content__body-hero">
+                            <p>
+                               Javob: I call ........ only after the corresponding check:
+                            </p>
+                        </div>
+                        <div class="content__body-text">
+                            <img src="{% static 'images/javob.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end mentors -->
+        <!-- start footer -->
+        <footer>
+            <div class="row">
+                <div class="footer__cols">
+                    <div class="footer__col-info">
+                        <a href="{% url 'index' %}">
+                            <img src="{% static 'images/kaktus_logo.png' %}" alt="aaa">
+                        </a>
+                        <p>5775 Sleman Sembada, amikom 999 Madboutdat, CO 89999 (404) 289-8899</p>
+                    </div>
+                    <div class="footer__col-menu">
+                        <ul>
+                            <li><a href="{% url 'index' %}">Bosh sahifa</a></li>
+                            <li><a href="{% url 'project' %}" >Amaliy ishlar</a></li>
+                            <li><a href="{% url 'mentor' %}" >Mentorlar</a></li>
+                            <li><a href="{% url 'article' %}" >Maqolalar</a></li>
+                            <li><a href="{% url 'course' %}">Kurslar</a></li>
+                            <li><a href="{% url 'event' %}">Tadbirlar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+
+    </div>
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>

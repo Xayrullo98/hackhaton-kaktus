@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAKTUS</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <!-- start page -->
+        <div class="page">
+            <div class="row">
+                <header>
+                    <div class="header__logo">
+                        <a href="{% url 'index' %}">
+                            <img src="{% static 'images/kaktus_logo.png' %}" alt="aaa">
+                        </a>
+                    </div>
+                    <nav class="header__nav">
+                        <ul>
+                            <li><a href="{% url 'index' %}">Bosh sahifa</a></li>
+                            <li><a href="{% url 'project' %}" class="active" >Amaliy ishlar</a></li>
+                            <li><a href="{% url 'mentor' %}">Mentorlar</a></li>
+                            <li><a href="{% url 'article' %}">Maqolalar</a></li>
+                            <li><a href="{% url 'course' %}">Kurslar</a></li>
+                            <li><a href="{% url 'event' %}" >Tadbirlar</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+        </div>
+        <!-- end page -->
+        <!-- start maqolalar -->
+        <div class="maqola_page">
+            <div class="row">
+                <div class="page__header">
+                    <div class="page__title">
+                        <i class="fa-regular fa-file-lines"></i> <span>Loyihalar</span>
+                    </div>
+                    <div class="page__filter">
+                        <a href="{% url 'project' %}" class="page__filter-btn ">Barchasi</a>
+                        <a href="{% url 'projectfilter' id=1 %}" class="page__filter-btn">Dasturlash</a>
+                        <a href="{% url 'projectfilter' id=2 %}" class="page__filter-btn">Dizayn</a>
+                        <a href="{% url 'projectfilter' id=3 %}" class="page__filter-btn">UX/UI</a>
+                    </div>
+                </div>
+                <div class="universal_cards">
+                    {% for i in data %}
+                    <div class="universal_card">
+                        <img src="{{i.picture.url}}" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">{{i.name}}</h5>
+                            <p class="card-text">{{i.text|slice:":100"}}</p>
+                            <p class="card-data">{{i.created_at}}</p>
+                            <a href="{% url 'feedback' %}" class="card-link">Batafsil <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <!-- end maqolalar -->
+        <!-- start footer -->
+        <footer>
+            <div class="row">
+                <div class="footer__cols">
+                    <div class="footer__col-info">
+                        <a href="index.html">
+                            <img src="{% static 'images/kaktus_logo.png' %}" alt="aaa">
+                        </a>
+                        <p>5775 Sleman Sembada, amikom 999 Madboutdat, CO 89999 (404) 289-8899</p>
+                    </div>
+                    <div class="footer__col-menu">
+                        <ul>
+                            <li><a href="{% url 'index' %}">Bosh sahifa</a></li>
+                            <li><a href="{% url 'project' %}" class="active" >Amaliy ishlar</a></li>
+                            <li><a href="{% url 'mentor' %}">Mentorlar</a></li>
+                            <li><a href="{% url 'article' %}">Maqolalar</a></li>
+                            <li><a href="{% url 'course' %}">Kurslar</a></li>
+                            <li><a href="{% url 'event' %}" >Tadbirlar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+
+    </div>
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>

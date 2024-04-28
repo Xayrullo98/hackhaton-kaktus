@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAKTUS</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <!-- start page -->
+        <div class="mentors__hero">
+            <div class="row">
+                <header>
+                    <div class="header__logo">
+                        <a href="{% url 'index' %}">
+                            <img src="{% static 'images/kaktus_logo.png' %}" alt="aaa">
+                        </a>
+                    </div>
+                    <nav class="header__nav">
+                        <ul>
+                             <li><a href="{% url 'index' %}">Bosh sahifa</a></li>
+                            <li><a href="{% url 'project' %}" >Amaliy ishlar</a></li>
+                            <li><a href="{% url 'mentor' %}" >Mentorlar</a></li>
+                            <li><a href="{% url 'article' %}" >Maqolalar</a></li>
+                            <li><a href="{% url 'course' %}">Kurslar</a></li>
+                            <li><a href="{% url 'event' %}">Tadbirlar</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+        </div>
+        <!-- end page -->
+        <!-- start mentors -->
+        <div class="mentor_page">
+            <div class="row">
+                <div class="page__header">
+                    <div class="page__title">
+                        <span>Loyiha</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="content">
+                    <div class="content__header">
+                        <div class="content__header-author">
+<!--                            <div class="author-logo">-->
+<!--                                <img src="{{ mentor.picture.url }}" alt="" width="35px">-->
+<!--                            </div>-->
+                            <div class="author-info">
+                                <h3>{{data.title}} </h3>
+                                <i class="fa-solid fa-briefcase"></i> <span>{{data.field.name}} </span>
+                            </div>
+                        </div>
+                        <div class="content__header-side">
+                            <span>{{data.created_at}}</span>
+                        </div>
+                    </div>
+                    <div class="content__body">
+                        <div class="content__body-hero">
+                            <div class="content__body-image">
+                                <img src="{{data.picture.url}}" alt="">
+                            </div>
+                            <div class="content__body-info">
+                                <div class="body__info-title">
+                                    <h2>{{data.requirements}}</h2>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="content__body-text">
+                            {{data.text}}
+                        </div>
+                        <a href="{% url 'project_single' id=i.id %}" class="card-link">Feedback <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end mentors -->
+        <!-- start footer -->
+        <footer>
+            <div class="row">
+                <div class="footer__cols">
+                    <div class="footer__col-info">
+                        <a href="{% url 'index' %}">
+                            <img src="{% static 'images/kaktus_logo.png' %}" alt="aaa">
+                        </a>
+                        <p>5775 Sleman Sembada, amikom 999 Madboutdat, CO 89999 (404) 289-8899</p>
+                    </div>
+                    <div class="footer__col-menu">
+                        <ul>
+                             <li><a href="{% url 'index' %}">Bosh sahifa</a></li>
+                            <li><a href="{% url 'project' %}" >Amaliy ishlar</a></li>
+                            <li><a href="{% url 'mentor' %}" >Mentorlar</a></li>
+                            <li><a href="{% url 'article' %}" >Maqolalar</a></li>
+                            <li><a href="{% url 'course' %}">Kurslar</a></li>
+                            <li><a href="{% url 'event' %}">Tadbirlar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+
+    </div>
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>

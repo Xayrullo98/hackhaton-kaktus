@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAKTUS</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <!-- start hero -->
+        <div class="hero">
+            <div class="row">
+                <header>
+                    <div class="header__logo">
+                        <a href="{% url 'index' %}">
+                            <img src="{% static 'images/kaktus_logo.png' %}" alt="aaa">
+                        </a>
+                    </div>
+                    <nav class="header__nav">
+                        <ul>
+                             <li><a href="{% url 'index' %}" class="active">Bosh sahifa</a></li>
+                            <li><a href="{% url 'project' %}" >Amaliy ishlar</a></li>
+                            <li><a href="{% url 'mentor' %}" >Mentorlar</a></li>
+                            <li><a href="{% url 'article' %}">Maqolalar</a></li>
+                            <li><a href="{% url 'course' %}">Kurslar</a></li>
+                            <li><a href="{% url 'event' %}">Tadbirlar</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__login">
+                        <a href="#">Kirish</a>
+                    </div>
+                </header>
+                <div class="hero__title">Amaliyot Nazariyadan <span>/Qimmatroq/</span></div>
+                <div class="hero__img">
+                    <div class="hero__left__radius"></div>
+                    <img src="{% static 'images/hero.png' %}" alt="Hero image: laptop, kaktus">
+                    <div class="hero__right__radius"></div>
+                </div>
+            </div>
+        </div>
+        <!-- end hero -->
+        <!-- start works -->
+        <div class="works">
+            <div class="row">
+                <h1 class="content__tittles">
+                    Amaliy ishlar
+                </h1>
+                <div class="works__cards">
+                    <div class="works__cards-card">
+                        <a href="{% url 'project' %}">
+                            <div class="works__card__row">
+                                <div class="works__card-icon">
+                                    <div class="intern-test-icon">
+                                        <i class="fa-regular fa-file-lines"></i>
+                                    </div>
+                                </div>
+                                <div class="works__card-text">
+                                    <div class="card__text-title">Sinov loyihalar </div>
+                                    <div class="card__text-text">Automate recurring invoices and save time by using pre-built templates. Get paid on time.</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="works__cards-card">
+                        <div class="works__card__row">
+                            <div class="works__card-icon">
+                                <div class="intern-test-icon">
+                                    <i class="fa-solid fa-users-rectangle"></i>
+                                </div>
+                            </div>
+                            <a class="works__card-text" href="{% url 'work' id=1 %}" >
+                                <div class="card__text-title">Stajirovka</div>
+                                <div class="card__text-text">Automate recurring invoices and save time by using pre-built templates. Get paid on time.</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="works__cards-card">
+                        <div class="works__card__row">
+                            <div class="works__card-icon">
+                                <div class="intern-test-icon">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                </div>
+                            </div>
+                            <div class="works__card-text">
+                                <a  class="card__text-title" href="{% url 'work' id=2 %}">Bo'sh ish o'rinlari</a>
+                                <div class="card__text-text">Automate recurring invoices and save time by using pre-built templates. Get paid on time.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works__cards-card">
+                        <div class="works__card__row">
+                            <div class="works__card-icon">
+                                <div class="intern-test-icon">
+                                    <i class="fa-solid fa-money-bill-1"></i>
+                                </div>
+                            </div>
+                            <div class="works__card-text">
+                                <a class="card__text-title" href="{% url 'work' id=3 %}" >Bir martalik ishlar</a>
+                                <div class="card__text-text">Automate recurring invoices and save time by using pre-built templates. Get paid on time.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end works -->
+        <!-- start mentors -->
+        <div class="mentors">
+            <div class="row">
+                <h1 class="content__tittles">
+                    Mentorlar va referrallar
+                </h1>
+                <div class="mentors__card">
+                    <div class="mentors__card__row">
+                        <div class="mentors__card-left">
+                            <img src="{% static 'images/mentors_photo.png' %}" alt="">
+                        </div>
+                        <div class="mentors__card-right">
+                            <div class="mentors__card-title">
+                                <div class="main-tittle">
+                                    Ushbu bo'limda Networking juda zarur, chunki:
+                                </div>
+                                <!-- <div class="sub-tittle">
+                                    You can get a tactical edge by listening to our weekly insight calls.
+                                </div> -->
+                            </div>
+                            <div class="mentors__card-list">
+                                <ul>
+                                    <li>Mentorlar bilan jonli suhbat</li>
+                                    <li>Referallar olish</li>
+                                    <li>Baholash va izoh qoldirish</li>
+                                </ul>
+                            </div>
+                            <div class="mentors__card-btn">
+                                <a href="{% url 'mentor' %}">Barchasini ko'rish &nbsp; <i class="fa-solid fa-arrow-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end mentors -->
+        <!-- start maqolalar -->
+        <div class="maqola">
+            <div class="row">
+                <h1 class="content__tittles">
+                    Maqolalar
+                </h1>
+                <div class="universal_cards">
+                    {% for i in articles %}
+                    <div class="universal_card">
+                        <img src="{{i.picture.url }}" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">{{i.name}}</h5>
+                            <p class="card-text">{{i.text}}</p>
+                            <p class="card-data">{{i.created_at}}</p>
+                            <a href="{% url 'article_single' i.id %}" class="card-link">Batafsil <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <!-- end maqolalar -->
+        <!-- start Tadbirlar -->
+        <div class="event">
+            <div class="row">
+                <h1 class="content__tittles">
+                    Tadbirlar
+                </h1>
+                <div class="universal_cards">
+                    {% for i in events %}
+                    <div class="universal_card">
+                        <img src="{{ i.picture.url }}" alt="" class="card-img-top">
+                        <div class="card-body">
+                            {% if i.status == 1 %}
+                                <p class="card-status active">Active</p>
+                            {% else %}
+                                <p class="card-status ">Active</p>
+                            {% endif %}
+                            <h5 class="card-title">{{ i.name }}</h5>
+                            <p class="card-text">{{i.text}}</p>
+                            <p class="card-data">{{i.created_at}}</p>
+                            <a href="{% url 'event_single' i.id %}" class="card-link">Batafsil <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <!-- end Tadbirlar -->
+        <!-- start Kurslar -->
+        <div class="courses">
+            <div class="row">
+                <h1 class="content__tittles">
+                    Kurslar
+                </h1>
+                <div class="courses__cards">
+                    {% for i in courses %}
+                    <div class="courses__card">
+                        <a href="#">
+                            <img src="{{i.picture.url}}" alt="" class="card-img-top">
+                            <div class="card__body">
+                                {% for mentor in mentors %}
+                                {% if mentor.field.id == i.field_id %}
+                                    <img src="{{ mentor.picture.url }}" alt="" width="35px">
+                                {% endif %}
+                                {% endfor %}
+                                <p class="user__name">{{i.name}}</p>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <!-- end Kurslar -->
+        <!-- start footer -->
+        <footer>
+            <div class="row">
+                <div class="footer__cols">
+                    <div class="footer__col-info">
+                        <a href="index.html">
+                            <img src="{% static 'images/kaktus_logo.png' %}" alt="aaa">
+                        </a>
+                        <p>5775 Sleman Sembada, amikom 999 Madboutdat, CO 89999 (404) 289-8899</p>
+                    </div>
+                    <div class="footer__col-menu">
+                        <ul>
+                            <li><a href="#">Bosh sahifa</a></li>
+                            <li><a href="#">Amaliy ishlar</a></li>
+                            <li><a href="#">Mentorlar</a></li>
+                            <li><a href="#">Maqolalar</a></li>
+                            <li><a href="#">Kurslar</a></li>
+                            <li><a href="#">Tadbirlar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+    </div>
+
+
+
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
